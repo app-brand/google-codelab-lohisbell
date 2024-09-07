@@ -1,7 +1,7 @@
 //
+import 'package:codelab_training/presentation/core/router_core.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 class LabOne extends StatelessWidget {
@@ -9,33 +9,20 @@ class LabOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // #2 Envoltorio para haccer una statelees con el
-    // uso de la libre provider, para que actualize la
-    // la interfaz
     return ChangeNotifierProvider(
       create: (context) => LabOneState(),
-      child: MaterialApp(
-        title: 'Namer app',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-            useMaterial3: true,
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
-        home: LabOnePage(),
-      ),
+      child: LabOnePage(),
     );
   }
 }
 
-// Notificador de cambio de estado
 class LabOneState extends ChangeNotifier {
   var current = WordPair.random();
-  // Genera una nueva variable aleatoria.
   void getNext() {
     current = WordPair.random();
     notifyListeners();
   }
 
-  // Lista de pares Favoritos
   var favorites = <WordPair>[];
 
   void toggleFavorite() {
@@ -48,27 +35,21 @@ class LabOneState extends ChangeNotifier {
   }
 }
 
-// Construccion de la interfaz de usuario en
-// concordancia con el codelab
 class LabOnePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Contexto para estar pendientes si existe algun cambio
-    // de estado y re=rendirizar la interfaz
     var appState = context.watch<LabOneState>();
     IconData icon;
-
     if (appState.favorites.contains(appState.current)) {
       icon = Icons.favorite;
     } else {
       icon = Icons.favorite_border;
     }
-
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            context.pop();
+            routerCore.pop();
           },
           icon: Icon(Icons.arrow_back),
         ),
@@ -93,7 +74,6 @@ class LabOnePage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // ('Next word - pressed');
                   appState.getNext();
                 },
                 child: Text('Next'),

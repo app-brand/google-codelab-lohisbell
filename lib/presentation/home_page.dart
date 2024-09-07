@@ -1,5 +1,5 @@
+import 'package:codelab_training/presentation/core/router_core.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -14,19 +14,21 @@ class HomePage extends StatelessWidget {
                 title: const Text('Namer app'),
                 subtitle: const Text('codelab #1'),
                 onTap: () => {
-                      context.go('/labOne'),
+                      routerCore.push('/labOne'),
                     }),
             ListTile(
               title: const Text('lab #2'),
               subtitle: const Text('Cambia fondo #2'),
               onTap: () => {
-                context.go('/labTwo'),
+                routerCore.push('/labTwo'),
               },
             ),
             ListTile(
               title: const Text('lab #3'),
               subtitle: const Text('Cambia fondo #3'),
-              onTap: () => {context.go('/labThree')},
+              onTap: () => {
+                routerCore.push('/labThree'),
+              },
             ),
           ],
         ),
