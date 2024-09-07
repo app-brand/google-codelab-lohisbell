@@ -17,8 +17,8 @@ class HomePage extends StatelessWidget {
                       routerCore.push('/labOne'),
                     }),
             ListTile(
-              title: const Text('lab #2'),
-              subtitle: const Text('Cambia fondo #2'),
+              title: const Text('Sing in form'),
+              subtitle: const Text('Codelab #2'),
               onTap: () => {
                 routerCore.push('/labTwo'),
               },

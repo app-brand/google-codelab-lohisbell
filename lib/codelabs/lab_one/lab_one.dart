@@ -18,12 +18,17 @@ class LabOne extends StatelessWidget {
 
 class LabOneState extends ChangeNotifier {
   var current = WordPair.random();
+  var favorites = <WordPair>[];
+
   void getNext() {
     current = WordPair.random();
     notifyListeners();
   }
 
-  var favorites = <WordPair>[];
+  void removeFavorite(WordPair sure) {
+    favorites.remove(sure);
+    notifyListeners();
+  }
 
   void toggleFavorite() {
     if (favorites.contains(current)) {
@@ -47,6 +52,7 @@ class LabOneGenerator extends StatelessWidget {
     }
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blueGrey,
         leading: IconButton(
           onPressed: () {
             routerCore.pop();
@@ -88,6 +94,48 @@ class LabOneGenerator extends StatelessWidget {
   }
 }
 
+class LabOneFavorites extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var appState = context.watch<LabOneState>();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey,
+        leading: IconButton(
+          onPressed: () {
+            routerCore.pop();
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Text('My Favorites...'),
+            SizedBox(
+              height: 10,
+            ),
+            for (var favorit in appState.favorites)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("${favorit.first} ${favorit.second}"),
+                  TextButton(
+                      onPressed: () {
+                        appState.removeFavorite(favorit);
+                      },
+                      child: Icon(
+                        Icons.favorite,
+                      ))
+                ],
+              ),
+          ]),
+        ),
+      ),
+    );
+  }
+}
+
 class BigCard extends StatelessWidget {
   const BigCard({
     super.key,
@@ -113,43 +161,60 @@ class BigCard extends StatelessWidget {
   }
 }
 
-class LabOnePage extends StatelessWidget {
+class LabOnePage extends StatefulWidget {
+  @override
+  State<LabOnePage> createState() => _LabOnePageState();
+}
+
+class _LabOnePageState extends State<LabOnePage> {
+  var selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Colors.green,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SafeArea(
-              child: NavigationRail(
-                extended: false,
-                destinations: [
-                  NavigationRailDestination(
-                    icon: Icon(Icons.home),
-                    label: Text('Home'),
-                  ),
-                  NavigationRailDestination(
-                    icon: Icon(Icons.favorite),
-                    label: Text('Favorites'),
-                  ),
-                ],
-                selectedIndex: 0,
-                onDestinationSelected: (value) {
-                  print('selected: $value');
-                },
+    Widget page;
+    switch (selectedIndex) {
+      case 0:
+        page = LabOneGenerator();
+        break;
+      case 1:
+        page = LabOneFavorites();
+        break;
+      default:
+        throw UnimplementedError('no widget for $selectedIndex');
+    }
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SafeArea(
+          child: NavigationRail(
+            backgroundColor: Colors.amber,
+            extended: true,
+            destinations: [
+              NavigationRailDestination(
+                icon: Icon(Icons.home),
+                label: Text('Home'),
               ),
-            ),
-            Expanded(
-              child: Container(
-                color: Theme.of(context).colorScheme.primaryContainer,
-                child: LabOneGenerator(),
+              NavigationRailDestination(
+                icon: Icon(Icons.favorite),
+                label: Text('Favorites'),
               ),
-            ),
-          ],
+            ],
+            selectedIndex: selectedIndex, // ← Change to this.
+            onDestinationSelected: (value) {
+              // ↓ Replace print with this.
+              setState(() {
+                selectedIndex = value;
+              });
+            },
+          ),
         ),
-      ),
+        Expanded(
+          child: Container(
+            color: Theme.of(context).colorScheme.primaryContainer,
+            child: page,
+          ),
+        ),
+      ],
     );
   }
 }
