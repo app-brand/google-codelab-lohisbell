@@ -1,0 +1,6 @@
+{
+    "workbench.localHistory.maxFileSize": 2048,
+    "dart.onlyAnalyzeProjectsWithOpenFiles": true,
+    "dart.renameFilesWithClasses": "prompt",
+    "diffEditor.maxFileSize": 0
+}
