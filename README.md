@@ -1,5 +1,5 @@
 # Codelab Training - by Google.
-### Created and modified by carlos lopez, in order to create a workshop repository for my own fox, that came to work on my team.
+### Created and modified by Carlos Lopez to create a workshop repository for my own fox, who joined our development team.
 
 ## Part One
 
