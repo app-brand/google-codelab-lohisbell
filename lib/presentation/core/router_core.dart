@@ -20,6 +20,10 @@ final routerCore = GoRouter(
       builder: (context, state) => LabTwo(),
     ),
     GoRoute(
+      path: '/WelcomelabTwo',
+      builder: (context, state) => WelcomeScreen(),
+    ),
+    GoRoute(
       path: '/labThree',
       builder: (context, state) => LabThree(),
     )

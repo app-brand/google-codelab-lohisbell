@@ -7,19 +7,8 @@
         {
             "name": "codelab_training",
             "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "codelab_training (profile mode)",
-            "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "codelab_training (release mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
+            "program": "lib/main.dart"
         }
     ]
 }
