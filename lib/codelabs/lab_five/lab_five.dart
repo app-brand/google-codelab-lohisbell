@@ -30,6 +30,7 @@ class _WeeklyForecastListState extends State<WeeklyForecastList> {
   // Esto puede ser refinado.
   ApiService _apiService = ApiService();
   Map<String, dynamic> _data = {};
+  List<String> _cities = ['Maracaibo', 'Caracas', 'Merida', 'Valencia'];
 
   @override
   void initState() {
@@ -40,9 +41,12 @@ class _WeeklyForecastListState extends State<WeeklyForecastList> {
   }
 
   Future<void> boringCall() async {
-    final origin = await _apiService.fetchData();
+    for (String aux in _cities) {
+      final city = await _apiService.fetchData(city: aux);
+      _data.addAll(city);
+    }
     setState(() {
-      _data = origin;
+      _data = _data;
     });
   }
 
