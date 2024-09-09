@@ -27,8 +27,9 @@ class WeeklyForecastList extends StatefulWidget {
 }
 
 class _WeeklyForecastListState extends State<WeeklyForecastList> {
+  // Esto puede ser refinado.
   ApiService _apiService = ApiService();
-  late Map<String, dynamic> _data;
+  Map<String, dynamic> _data = {};
 
   @override
   void initState() {
@@ -42,7 +43,6 @@ class _WeeklyForecastListState extends State<WeeklyForecastList> {
     final origin = await _apiService.fetchData();
     setState(() {
       _data = origin;
-      print(_data['sys']);
     });
   }
 
@@ -55,7 +55,7 @@ class _WeeklyForecastListState extends State<WeeklyForecastList> {
       child: _data.isEmpty
           ? CircularProgressIndicator()
           : Text(
-              _data['sys'],
+              _data['sys'].toString(),
             ),
     ));
   }
