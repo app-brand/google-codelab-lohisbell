@@ -1,4 +1,5 @@
 //import 'package:codelab_training/codelabs/lab_one/lab_one.dart';
+import 'package:codelab_training/codelabs/lab_five/lab_five.dart';
 import 'package:codelab_training/codelabs/lab_four/lab_four.dart';
 import 'package:codelab_training/codelabs/lab_one/lab_one.dart';
 import 'package:codelab_training/codelabs/lab_three/lab_three.dart';
@@ -27,6 +28,10 @@ final routerCore = GoRouter(
     GoRoute(
       path: '/labFour',
       builder: (context, state) => DocumentApp(),
+    ),
+    GoRoute(
+      path: '/labFive',
+      builder: (context, state) => LabFive(),
     )
   ],
 );
