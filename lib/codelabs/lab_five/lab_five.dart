@@ -51,12 +51,17 @@ class _WeeklyForecastListState extends State<WeeklyForecastList> {
     //final DateTime currentDate = DateTime.now();
     //final -> Aqui lista de los dias y su prediccion climatica
     return SingleChildScrollView(
-        child: Center(
-      child: _data.isEmpty
-          ? CircularProgressIndicator()
-          : Text(
-              _data['sys'].toString(),
-            ),
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(
+          child: _data.isEmpty
+              ? CircularProgressIndicator()
+              : Text(
+                  _data['sys'].toString(),
+                ),
+        ),
+      ],
     ));
   }
 }
