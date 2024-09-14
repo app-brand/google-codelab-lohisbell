@@ -37,6 +37,13 @@ class HomePage extends StatelessWidget {
                 routerCore.push('/labFive'),
               },
             ),
+            ListTile(
+              title: const Text('Using dev-tools'),
+              subtitle: const Text('Codelab #6'),
+              onTap: () => {
+                routerCore.push('/labSix'),
+              },
+            ),
           ],
         ),
       ),
