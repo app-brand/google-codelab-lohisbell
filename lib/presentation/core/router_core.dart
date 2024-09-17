@@ -1,6 +1,7 @@
 import 'package:codelab_training/codelabs/lab_five/lab_five.dart';
 import 'package:codelab_training/codelabs/lab_four/lab_four.dart';
 import 'package:codelab_training/codelabs/lab_one/lab_one.dart';
+import 'package:codelab_training/codelabs/lab_seven/lab_seven.dart';
 import 'package:codelab_training/codelabs/lab_six/lab_six.dart';
 import 'package:codelab_training/codelabs/lab_two/lab_two.dart';
 import 'package:codelab_training/presentation/home_page.dart';
@@ -35,6 +36,10 @@ final routerCore = GoRouter(
     GoRoute(
       path: '/labSix',
       builder: (context, state) => Menu(),
+    ),
+    GoRoute(
+      path: '/labSeven',
+      builder: (context, state) => FadeInDemo(),
     )
   ],
 );

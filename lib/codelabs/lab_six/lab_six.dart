@@ -22,28 +22,25 @@ class MenuItem extends StatelessWidget {
 class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Menu Demo'),
-          leading: IconButton(
-            onPressed: () {
-              routerCore.pop();
-            },
-            icon: Icon(Icons.arrow_back),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Menu Demo'),
+        leading: IconButton(
+          onPressed: () {
+            routerCore.pop();
+          },
+          icon: Icon(Icons.arrow_back),
         ),
-        body: Padding(
-          padding: EdgeInsets.all(20.0),
-          child: Column(
-            children: [
-              // Modify code here
-              Example1(),
-              Example2(),
-              Example3()
-            ],
-          ),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          children: [
+            // Modify code here
+            Example1(),
+            Example2(),
+            Example3()
+          ],
         ),
       ),
     );
@@ -58,10 +55,13 @@ class Example1 extends StatelessWidget {
       padding: EdgeInsets.only(bottom: 30.0),
       child: Row(
         children: [
-          Text(
-            'Explore the restaurant\'s delicious menu items below!',
-            style: TextStyle(
-              fontSize: 18.0,
+          Expanded(
+            flex: 1,
+            child: Text(
+              'Explore the restaurant\'s delicious menu items below!',
+              style: TextStyle(
+                fontSize: 18.0,
+              ),
             ),
           ),
         ],
@@ -74,14 +74,17 @@ class Example1 extends StatelessWidget {
 class Example2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        MenuItem('🍔', 'Burger'),
-        MenuItem('🌭', 'Hot Dog'),
-        MenuItem('🍟', 'Fries'),
-        MenuItem('🥤', 'Soda'),
-        MenuItem('🍦', 'Ice Cream'),
-      ],
+    return Expanded(
+      flex: 1,
+      child: ListView(
+        children: [
+          MenuItem('🍔', 'Burger'),
+          MenuItem('🌭', 'Hot Dog'),
+          MenuItem('🍟', 'Fries'),
+          MenuItem('🥤', 'Soda'),
+          MenuItem('🍦', 'Ice Cream'),
+        ],
+      ),
     );
   }
 }
@@ -90,31 +93,34 @@ class Example2 extends StatelessWidget {
 class Example3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        ElevatedButton(
-          onPressed: () {
-            print('Pickup button pressed.');
-          },
-          child: Text(
-            'Pickup',
+    return SizedBox(
+      height: 50,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              print('Pickup button pressed.');
+            },
+            child: Text(
+              'Pickup',
+            ),
           ),
-        ),
-        // This widget is not shown on screen initially.
-        VerticalDivider(
-          width: 20.0,
-          thickness: 5.0,
-        ),
-        ElevatedButton(
-          onPressed: () {
-            print('Delivery button pressed.');
-          },
-          child: Text(
-            'Delivery',
+          // This widget is not shown on screen initially.
+          VerticalDivider(
+            width: 20.0,
+            thickness: 5.0,
           ),
-        )
-      ],
+          ElevatedButton(
+            onPressed: () {
+              print('Delivery button pressed.');
+            },
+            child: Text(
+              'Delivery',
+            ),
+          )
+        ],
+      ),
     );
   }
 }
