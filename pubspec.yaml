@@ -7,6 +7,7 @@ environment:
   sdk: ^3.5.1
 
 dependencies:
+  cloud_firestore: ^5.4.4
   dio: ^5.7.0
   english_words: ^4.0.0
   flutter:
