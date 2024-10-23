@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "455751492446",
+    "project_id": "codelab-training-eecd6",
+    "storage_bucket": "codelab-training-eecd6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455751492446:android:a8b485afc89cf980b2a5cf",
+        "android_client_info": {
+          "package_name": "xyz.codelab.www"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRcEG6LL34jsbsmkCxH-4Xg1qVs5hnzRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
