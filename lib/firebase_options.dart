@@ -8,7 +8,7 @@ import 'package:flutter/foundation.dart'
 ///
 /// Example:
 /// ```dart
-/// import 'firebase_options.dart';
+/// import 'my_options.dart';
 /// // ...
 /// await Firebase.initializeApp(
 ///   options: DefaultFirebaseOptions.currentPlatform,
@@ -58,7 +58,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCRcEG6LL34jsbsmkCxH-4Xg1qVs5hnzRU',
-    appId: '1:455751492446:android:a8b485afc89cf980b2a5cf',
+    appId: '1:455751492446:android:aaef36d190f646e8b2a5cf',
     messagingSenderId: '455751492446',
     projectId: 'codelab-training-eecd6',
     storageBucket: 'codelab-training-eecd6.appspot.com',

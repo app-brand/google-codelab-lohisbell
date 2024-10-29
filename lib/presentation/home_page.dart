@@ -51,6 +51,20 @@ class HomePage extends StatelessWidget {
                 routerCore.push('/labSeven'),
               },
             ),
+            ListTile(
+              title: const Text('Authentication using Firebase UI'),
+              subtitle: const Text('Codelab #8'),
+              onTap: () => {
+                routerCore.push('/labEight'),
+              },
+            ),
+            ListTile(
+              title: const Text('Get to know flutter'),
+              subtitle: const Text('Codelab #9'),
+              onTap: () => {
+                routerCore.push('/labNine'),
+              },
+            ),
           ],
         ),
       ),
