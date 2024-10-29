@@ -2,10 +2,11 @@ import 'package:codelab_training/codelabs/lab_eight/firebase_auth_ui.dart';
 import 'package:codelab_training/codelabs/lab_five/lab_five.dart';
 import 'package:codelab_training/codelabs/lab_four/lab_four.dart';
 import 'package:codelab_training/codelabs/lab_nine/know_firebase.dart';
-import 'package:codelab_training/codelabs/lab_nine/src/application_state.dart';
+import 'package:codelab_training/presentation/core/state_core.dart';
 import 'package:codelab_training/codelabs/lab_one/lab_one.dart';
 import 'package:codelab_training/codelabs/lab_seven/lab_seven.dart';
 import 'package:codelab_training/codelabs/lab_six/lab_six.dart';
+import 'package:codelab_training/codelabs/lab_ten/lab_ten.dart';
 import 'package:codelab_training/codelabs/lab_two/lab_two.dart';
 import 'package:codelab_training/presentation/home_page.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
@@ -83,6 +84,10 @@ final routerCore = GoRouter(
           },
         ),
       ],
+    ),
+    GoRoute(
+      path: '/labTen',
+      builder: (context, state) => LabTen(),
     )
   ],
 );

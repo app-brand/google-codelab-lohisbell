@@ -65,6 +65,13 @@ class HomePage extends StatelessWidget {
                 routerCore.push('/labNine'),
               },
             ),
+            ListTile(
+              title: const Text('Cloud Firestore Web Codelab'),
+              subtitle: const Text('Codelab #10'),
+              onTap: () => {
+                routerCore.push('/labTen'),
+              },
+            ),
           ],
         ),
       ),

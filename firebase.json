@@ -1,1 +1,42 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"codelab-training-eecd6","appId":"1:455751492446:android:aaef36d190f646e8b2a5cf","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"codelab-training-eecd6","configurations":{"android":"1:455751492446:android:a8b485afc89cf980b2a5cf","ios":"1:455751492446:ios:55e9333c92f4f8eeb2a5cf","web":"1:455751492446:web:b680b12229bea51fb2a5cf"}},"my_options.dart":{"projectId":"codelab-training-eecd6","configurations":{"android":"1:455751492446:android:aaef36d190f646e8b2a5cf","ios":"1:455751492446:ios:55e9333c92f4f8eeb2a5cf","web":"1:455751492446:web:b680b12229bea51fb2a5cf"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "codelab-training-eecd6",
+          "appId": "1:455751492446:android:aaef36d190f646e8b2a5cf",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "codelab-training-eecd6",
+          "configurations": {
+            "android": "1:455751492446:android:a8b485afc89cf980b2a5cf",
+            "ios": "1:455751492446:ios:55e9333c92f4f8eeb2a5cf",
+            "web": "1:455751492446:web:b680b12229bea51fb2a5cf"
+          }
+        },
+        "my_options.dart": {
+          "projectId": "codelab-training-eecd6",
+          "configurations": {
+            "android": "1:455751492446:android:aaef36d190f646e8b2a5cf",
+            "ios": "1:455751492446:ios:55e9333c92f4f8eeb2a5cf",
+            "web": "1:455751492446:web:b680b12229bea51fb2a5cf"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-central1"
+    }
+  }
+}

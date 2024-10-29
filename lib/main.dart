@@ -1,4 +1,4 @@
-import 'package:codelab_training/codelabs/lab_nine/src/application_state.dart';
+import 'package:codelab_training/presentation/core/state_core.dart';
 import 'package:codelab_training/presentation/core/home_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';

@@ -1,4 +1,4 @@
-import 'package:codelab_training/codelabs/lab_nine/src/application_state.dart';
+import 'package:codelab_training/presentation/core/state_core.dart';
 import 'package:codelab_training/codelabs/lab_nine/src/widgets.dart';
 import 'package:flutter/material.dart';
 
