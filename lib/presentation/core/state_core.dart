@@ -97,6 +97,12 @@ class ApplicationState extends ChangeNotifier {
       'timestamp': DateTime.now().millisecondsSinceEpoch,
       'name': FirebaseAuth.instance.currentUser!.displayName,
       'userId': FirebaseAuth.instance.currentUser!.uid,
+      'origin': [
+        <String, dynamic>{
+          'latitud': 1.7777777,
+          'longitud': -1.78746633,
+        }
+      ]
     });
   }
 }
