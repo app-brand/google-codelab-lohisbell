@@ -11,8 +11,9 @@ void main() {
   testWidgets('HomeCore renders correctly', (WidgetTester tester) async {
     // GIVEN
     await tester.pumpWidget(
-      MaterialApp(
-        home: HomePage(),
+      ChangeNotifierProvider(
+        create: (context) => ApplicationState(),
+        builder: ((context, child) => const HomeCore()),
       ),
     );
     // WHEN AND THEN
