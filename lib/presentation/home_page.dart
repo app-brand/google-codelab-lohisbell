@@ -75,8 +75,11 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Container(
-        color: Colors.blue,
+      body: Center(
+        child: Container(
+          color: Colors.blue,
+          child: Text('Codelab Training 2.0'),
+        ),
       ),
     );
   }

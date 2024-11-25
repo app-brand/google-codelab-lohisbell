@@ -3,5 +3,6 @@
     "dart.onlyAnalyzeProjectsWithOpenFiles": true,
     "dart.renameFilesWithClasses": "prompt",
     "diffEditor.maxFileSize": 0,
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "cmake.ignoreCMakeListsMissing": true
 }
