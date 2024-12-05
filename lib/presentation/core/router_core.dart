@@ -1,12 +1,12 @@
-import 'package:codelab_training/codelabs/lab_eight/firebase_auth_ui.dart';
+import 'package:codelab_training/codelabs/lab_alfa/firebase_auth_ui.dart';
 import 'package:codelab_training/codelabs/lab_five/lab_five.dart';
 import 'package:codelab_training/codelabs/lab_four/lab_four.dart';
-import 'package:codelab_training/codelabs/lab_nine/know_firebase.dart';
+import 'package:codelab_training/codelabs/lab_beta/know_firebase.dart';
 import 'package:codelab_training/presentation/core/state_core.dart';
 import 'package:codelab_training/codelabs/lab_one/lab_one.dart';
 import 'package:codelab_training/codelabs/lab_seven/lab_seven.dart';
 import 'package:codelab_training/codelabs/lab_six/lab_six.dart';
-import 'package:codelab_training/codelabs/lab_ten/lab_ten.dart';
+import 'package:codelab_training/codelabs/lab_gama/lab_ten.dart';
 import 'package:codelab_training/codelabs/lab_two/lab_two.dart';
 import 'package:codelab_training/presentation/home_page.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
@@ -48,11 +48,11 @@ final routerCore = GoRouter(
       builder: (context, state) => FadeInDemo(),
     ),
     GoRoute(
-      path: '/labEight',
+      path: '/labAlfa',
       builder: (context, state) => FirebaseAuthUi(),
     ),
     GoRoute(
-      path: '/labNine',
+      path: '/labBeta',
       builder: (context, state) {
         // Utilizando providar - ver como implementar con blocs!
         final isLoggedIn = context.watch<ApplicationState>().loggedIn;
@@ -86,7 +86,7 @@ final routerCore = GoRouter(
       ],
     ),
     GoRoute(
-      path: '/labTen',
+      path: '/labGama',
       builder: (context, state) => LabTen(),
     )
   ],

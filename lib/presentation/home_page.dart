@@ -52,24 +52,32 @@ class HomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Authentication using Firebase UI'),
+              title: const Text(
+                  'Beatiful transitions With Material Motion for flutter'),
               subtitle: const Text('Codelab #8'),
               onTap: () => {
                 routerCore.push('/labEight'),
               },
             ),
             ListTile(
-              title: const Text('Get to know flutter'),
-              subtitle: const Text('Codelab #9'),
+              title: const Text('Authentication using Firebase UI'),
+              subtitle: const Text('Codelab #-Alpha'),
               onTap: () => {
-                routerCore.push('/labNine'),
+                routerCore.push('/labAlfa'),
+              },
+            ),
+            ListTile(
+              title: const Text('Get to know flutter'),
+              subtitle: const Text('Codelab #-Beta'),
+              onTap: () => {
+                routerCore.push('/labBeta'),
               },
             ),
             ListTile(
               title: const Text('Cloud Firestore Web Codelab'),
-              subtitle: const Text('Codelab #10'),
+              subtitle: const Text('Codelab #-Gama'),
               onTap: () => {
-                routerCore.push('/labTen'),
+                routerCore.push('/labGama'),
               },
             ),
           ],

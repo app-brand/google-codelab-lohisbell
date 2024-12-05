@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:codelab_training/codelabs/lab_nine/src/guest_book_message.dart';
-import 'package:codelab_training/codelabs/lab_nine/src/widgets.dart';
+import 'package:codelab_training/codelabs/lab_beta/src/guest_book_message.dart';
+import 'package:codelab_training/codelabs/lab_beta/src/widgets.dart';
 import 'package:flutter/material.dart';
 
 class GuestBook extends StatefulWidget {

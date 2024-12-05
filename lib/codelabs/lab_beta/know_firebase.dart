@@ -1,8 +1,8 @@
 import 'package:codelab_training/presentation/core/state_core.dart';
-import 'package:codelab_training/codelabs/lab_nine/src/authentication.dart';
-import 'package:codelab_training/codelabs/lab_nine/src/guest_book.dart';
-import 'package:codelab_training/codelabs/lab_nine/src/widgets.dart';
-import 'package:codelab_training/codelabs/lab_nine/src/yes_or_not_selection.dart';
+import 'package:codelab_training/codelabs/lab_beta/src/authentication.dart';
+import 'package:codelab_training/codelabs/lab_beta/src/guest_book.dart';
+import 'package:codelab_training/codelabs/lab_beta/src/widgets.dart';
+import 'package:codelab_training/codelabs/lab_beta/src/yes_or_not_selection.dart';
 import 'package:codelab_training/presentation/core/router_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
