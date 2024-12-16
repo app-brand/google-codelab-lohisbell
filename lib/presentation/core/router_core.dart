@@ -1,4 +1,5 @@
 import 'package:codelab_training/codelabs/lab_alfa/firebase_auth_ui.dart';
+import 'package:codelab_training/codelabs/lab_eight/reply_app.dart';
 import 'package:codelab_training/codelabs/lab_five/lab_five.dart';
 import 'package:codelab_training/codelabs/lab_four/lab_four.dart';
 import 'package:codelab_training/codelabs/lab_beta/know_firebase.dart';
@@ -46,6 +47,10 @@ final routerCore = GoRouter(
     GoRoute(
       path: '/labSeven',
       builder: (context, state) => FadeInDemo(),
+    ),
+    GoRoute(
+      path: '/labEight',
+      builder: (context, state) => ReplyApp(),
     ),
     GoRoute(
       path: '/labAlfa',
